@@ -15,7 +15,7 @@ class Form {
         Form(const std::string nm, int gToAssigned, int gToExecute);
         void beSigned(const Bureaucrat &bureaucrat);
         bool isAsigned() const;
-        const std::string getName();
+        const std::string getName() const;
         int getGradeToExecute() const;
         int getGradeToAssigned() const;
         class GradeTooHighException : public std::exception {
@@ -29,16 +29,15 @@ class Form {
 
     private:
         const std::string name;
-        bool asigned;
         const int gradeToExecute;
         const int gradeToAssigned; 
+        bool asigned;
        
 
     
 };
 
 
-std::ostream& operator<<(std::ostream& os, const Form &other);          
-//std::ostream& operator<<(std::ostream& os, const Bureaucrat &other);          
+std::ostream& operator<<(std::ostream& os, const Form &other);                
 
 #endif

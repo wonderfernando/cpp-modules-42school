@@ -1,58 +1,20 @@
 #include "Bureaucrat.hpp"
-
-int main(void){
-    /*{
-        try {
-            std::cout << "Test Print Object:" << std::endl;
-            Bureaucrat bure("Fernando", 1);
-            std::cout << bure << std::endl;
-        }
-        catch(const std::exception& e)
+#include "Form.hpp"
+int main(void)
+{
+    {
+        try
         {
-            std::cout << e.what() << '\n';
+            Bureaucrat Bur1("Bur1", 15);
+            Form form1("Form1", 20, 45);
+            std::cout << Bur1 << std::endl;
+            std::cout << form1 << std::endl;
+            Bur1.signForm(form1);
         }
-    }
-
-
-    std::cout << std::endl;
-    std::cout << std::endl;
-    {
-        std::cout << "Test Increment and decrement: " <<std::endl;
-        Bureaucrat bure("Fernando", 1);
-        std::cout << bure << std::endl;
-        bure.decrement();
-        std::cout << bure << std::endl;
-        bure.increment();
-        std::cout << bure << std::endl;
-    }
-
-
-    std::cout << std::endl;
-    std::cout << std::endl;
-    {
-        std::cout << "Test Exception TooHigh: " <<std::endl;
-        try {
-            Bureaucrat bure("Fernando", 1);
-            std::cout << bure << std::endl;
-            bure.increment();
-        }catch (std::exception &e){
+        catch (std::exception &e)
+        {
             std::cout << e.what() << std::endl;
         }
     }
-
-
-    std::cout << std::endl;
-    std::cout << std::endl;
-    {
-        std::cout << "Test Exception TooLow: " <<std::endl;
-        try {
-            Bureaucrat bure("Fernando", 150);
-            std::cout << bure << std::endl;
-            bure.decrement();
-        }catch (std::exception &e){
-            std::cout << e.what() << std::endl;
-        }
-    }
- */
     return (0);
 }

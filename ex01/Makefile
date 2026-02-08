@@ -1,4 +1,4 @@
-NAME=Bureaucrat
+NAME=Form
 OBJS=src/main.o src/Bureaucrat.o src/Form.o
 INCLUDE=src/Bureaucrat.hpp src/Form.hpp
 CXX= c++
@@ -9,7 +9,7 @@ RESET = \033[0m
 RED = \033[31m
 
 all: $(NAME) 
-	@echo Execute o Programa: ./Bureaucrat
+	@echo Execute o Programa: ./Form
 
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME) 
